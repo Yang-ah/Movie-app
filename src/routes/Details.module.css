@@ -1,0 +1,29 @@
+.detail {
+  width: 100%;
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.wrap {
+  width: 700px;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sectionImg {
+  width: 30%;
+}
+
+.sectionImg > img {
+  width: 100%;
+}
+
+.sectionInfo {
+  width: 70%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
