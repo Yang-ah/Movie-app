@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
-import styles from "./Details.module.css";
+import styles from "../css/Details.module.css";
 
 function Details() {
   const [movie, setMoive] = useState("");

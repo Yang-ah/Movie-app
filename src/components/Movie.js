@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Movie.module.css";
+import styles from "../css/Movie.module.css";
 
 function Movie({
   coverImg,
