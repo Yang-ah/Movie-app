@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
   border: 1px solid grey;
   border-radius: 15px;
 }
@@ -27,4 +26,19 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.hover {
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.hover:hover {
+  position: relative;
+  background-color: rgba(1, 1, 1, 0.8);
+  z-index: 99;
+  transform: scale(1.1);
+}
+.hover:hover .wrap {
+  color: white;
 }
