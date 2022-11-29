@@ -14,16 +14,16 @@ function Movie({
   return (
     <Link to={`/movie/${id}`}>
       <div className={styles.wrap}>
-        <div className={styles.hover}></div>
-        <span className={styles.hoverTxt}>Go Detail👉🏻</span>
+        <div className={styles.wrap_hover}></div>
+        <span className={styles.hover_txt}>Go Detail👉🏻</span>
         <h3>{`${title}  ⭐${rating}`}</h3>
-        <div className={styles.top}>
+        <section className={styles.top_sec}>
           <h4>
             Genres : {genres[0]}
             {`   |   release : ${year}`}
             {runtime ? `   |   ${runtime} min` : null}
           </h4>
-        </div>
+        </section>
         <img src={coverImg} alt={title} />
         <p className={styles.summary}>{summary}</p>
       </div>

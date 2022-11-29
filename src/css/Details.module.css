@@ -1,11 +1,11 @@
-.detail {
+.wrap {
   width: 100%;
   display: flex;
   margin: 20px;
   justify-content: center;
 }
 
-.wrap {
+.section {
   width: 1000px;
   display: flex;
   margin-top: 20px;
@@ -13,29 +13,18 @@
   justify-content: space-between;
 }
 
-.title {
-  font-size: 50px;
-  padding-bottom: 50px;
-}
-.sectionImg {
+/* img section */
+.sec_imgcon {
   width: 25%;
 }
 
-.sectionImg > img {
+.sec_imgcon > img {
   width: 100%;
 }
+/*img section end*/
 
-.sectionInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  padding: 50px 10px;
-  border-top: 0.5px solid rgba(1, 1, 1, 0.2);
-  border-bottom: 0.5px solid rgba(1, 1, 1, 0.2);
-  position: relative;
-}
-.homeLink {
+/* home btn (in txt section)*/
+.homeBtn {
   position: absolute;
   top: -28px;
   left: 0;
@@ -48,12 +37,32 @@
   text-align: center;
   border-radius: 4px;
 }
-.homeLink:hover {
+
+.homeBtn:hover {
   transform: scale(1.2);
   z-index: 99;
 }
+/* home btn end*/
 
-.txt {
+/* txt container*/
+.sec_txtcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 50px 10px;
+  border-top: 0.5px solid rgba(1, 1, 1, 0.2);
+  border-bottom: 0.5px solid rgba(1, 1, 1, 0.2);
+  position: relative;
+}
+
+.title {
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+
+/* txt_ul : rating, runtime, genres (in txt section) */
+.txt_ul {
   justify-content: space-between;
   width: 80%;
   display: flex;
@@ -62,38 +71,42 @@
   font-size: 18px;
 }
 
-.txt > li {
+.txt_ul > li {
   padding-bottom: 10px;
 }
 
-.txt > li > span:first-child,
-.summaryDiv span {
+.txt_ul > li > span:first-child,
+.sum_con span {
   color: rgba(1, 1, 1, 0.5);
   margin-right: 10px;
   font-size: 18px;
 }
 
-.genresLi {
+.genres_con {
   display: flex;
 }
 
-.genres {
+.genres_ul {
   display: flex;
 }
-.genres > li {
+.genres_ul > li {
   padding: 0 10px;
   border-right: 1px solid rgba(1, 1, 1, 0.2);
 }
-.genres > li:first-child {
+.genres_ul > li:first-child {
   padding-left: 0px;
 }
 
-.genres > li:last-child {
+.genres_ul > li:last-child {
   border: none;
 }
-.summaryDiv {
+/* txt_ul end */
+
+.sum_con {
   width: 80%;
 }
-.summaryDiv > p {
+.sum_con > p {
   margin-top: 5px;
 }
+
+/*txt container end*/

@@ -19,18 +19,18 @@ function Details() {
   }, [getMovie]);
 
   return (
-    <div className={styles.detail}>
+    <div className={styles.wrap}>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className={styles.wrap}>
-          <section className={styles.sectionInfo}>
-            <Link to={`/`} className={styles.homeLink}>
+        <section className={styles.section}>
+          <article className={styles.sec_txtcon}>
+            <Link to={`/`} className={styles.homeBtn}>
               <div>🏠Home</div>
             </Link>
             <h1 className={styles.title}>{movie.title}</h1>
 
-            <ul className={styles.txt}>
+            <ul className={styles.txt_ul}>
               <li>
                 <span>Rating</span>
                 <span>⭐{movie.rating}</span>
@@ -41,25 +41,25 @@ function Details() {
                 <span>{movie.runtime} minutes</span>
               </li>
 
-              <li className={styles.genresLi}>
+              <li className={styles.genres_con}>
                 <span>Genres</span>
 
-                <ul className={styles.genres}>
+                <ul className={styles.genres_ul}>
                   {movie?.genres?.map((g) => (
                     <li key={g}>{g}</li>
                   ))}
                 </ul>
               </li>
             </ul>
-            <div className={styles.summaryDiv}>
+            <div className={styles.sum_con}>
               <span>Summary</span>
               <p>{movie.description_full}</p>
             </div>
-          </section>
-          <section className={styles.sectionImg}>
+          </article>
+          <article className={styles.sec_imgcon}>
             <img src={movie.medium_cover_image} alt={id} />
-          </section>
-        </div>
+          </article>
+        </section>
       )}
     </div>
   );
