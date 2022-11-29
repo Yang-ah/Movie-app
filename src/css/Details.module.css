@@ -33,6 +33,24 @@
   padding: 50px 10px;
   border-top: 0.5px solid rgba(1, 1, 1, 0.2);
   border-bottom: 0.5px solid rgba(1, 1, 1, 0.2);
+  position: relative;
+}
+.homeLink {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  font-size: 14px;
+  width: 72px;
+  padding: 2px;
+  padding-right: 4px;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  background-color: rgba(193, 202, 179, 0.2);
+  text-align: center;
+  border-radius: 4px;
+}
+.homeLink:hover {
+  transform: scale(1.2);
+  z-index: 99;
 }
 
 .txt {

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import styles from "../css/Details.module.css";
 
@@ -25,6 +25,9 @@ function Details() {
       ) : (
         <div className={styles.wrap}>
           <section className={styles.sectionInfo}>
+            <Link to={`/`} className={styles.homeLink}>
+              <div>🏠Home</div>
+            </Link>
             <h1 className={styles.title}>{movie.title}</h1>
 
             <ul className={styles.txt}>
