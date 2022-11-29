@@ -25,25 +25,37 @@ function Details() {
         <h1>Loading...</h1>
       ) : (
         <div className={styles.wrap}>
-          <h1>{movie.title}</h1>
-          <div className={styles.container}>
-            <section className={styles.sectionInfo}>
-              <p>
-                {`rating : ${movie.rating}
-                runtime : ${movie.runtime} minutes`}
-              </p>
-              <ul>
-                <li>genres : &nbsp;</li>
-                {movie?.genres?.map((g) => (
-                  <li key={g}>{g}</li>
-                ))}
-              </ul>
+          <section className={styles.sectionInfo}>
+            <h1 className={styles.title}>{movie.title}</h1>
+
+            <ul>
+              <li>
+                <span>Rating : </span>
+                <span>⭐{movie.rating}</span>
+              </li>
+
+              <li>
+                <span>Runtime : </span>
+                <span>{movie.runtime} minutes</span>
+              </li>
+
+              <li className={styles.genres}>
+                <span>Genres : </span>
+                <ul>
+                  {movie?.genres?.map((g) => (
+                    <li key={g}>{g}&nbsp;</li>
+                  ))}
+                </ul>
+              </li>
+            </ul>
+            <div>
+              <span>Summary</span>
               <p>{movie.description_full}</p>
-            </section>
-            <section className={styles.sectionImg}>
-              <img src={movie.medium_cover_image} alt={id} />
-            </section>
-          </div>
+            </div>
+          </section>
+          <section className={styles.sectionImg}>
+            <img src={movie.medium_cover_image} alt={id} />
+          </section>
         </div>
       )}
     </div>

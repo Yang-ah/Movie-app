@@ -6,16 +6,20 @@
 }
 
 .wrap {
-  width: 700px;
-}
-
-.container {
+  width: 1000px;
   display: flex;
   margin-top: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
+.title {
+  font-size: 50px;
+  padding: 20px 0;
+  width: 100%;
+}
 .sectionImg {
-  width: 30%;
+  width: 25%;
 }
 
 .sectionImg > img {
@@ -23,7 +27,13 @@
 }
 
 .sectionInfo {
-  width: 70%;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  width: 60%;
+  padding: 10px;
+  margin: 0 50px 0 10px;
+  border-top: 0.5px solid rgba(1, 1, 1, 0.2);
+  border-bottom: 0.5px solid rgba(1, 1, 1, 0.2);
+}
+
+.genres {
+  display: flex;
 }
