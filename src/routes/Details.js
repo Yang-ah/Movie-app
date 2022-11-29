@@ -11,7 +11,6 @@ function Details() {
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
     setMoive(json.data.movie);
-    console.log(json.data.movie);
     setloading(false);
   }, [id]);
 
@@ -28,27 +27,28 @@ function Details() {
           <section className={styles.sectionInfo}>
             <h1 className={styles.title}>{movie.title}</h1>
 
-            <ul>
+            <ul className={styles.txt}>
               <li>
-                <span>Rating : </span>
+                <span>Rating</span>
                 <span>⭐{movie.rating}</span>
               </li>
 
               <li>
-                <span>Runtime : </span>
+                <span>Runtime</span>
                 <span>{movie.runtime} minutes</span>
               </li>
 
-              <li className={styles.genres}>
-                <span>Genres : </span>
-                <ul>
+              <li className={styles.genresLi}>
+                <span>Genres</span>
+
+                <ul className={styles.genres}>
                   {movie?.genres?.map((g) => (
-                    <li key={g}>{g}&nbsp;</li>
+                    <li key={g}>{g}</li>
                   ))}
                 </ul>
               </li>
             </ul>
-            <div>
+            <div className={styles.summaryDiv}>
               <span>Summary</span>
               <p>{movie.description_full}</p>
             </div>

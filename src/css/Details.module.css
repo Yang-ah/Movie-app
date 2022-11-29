@@ -15,8 +15,7 @@
 
 .title {
   font-size: 50px;
-  padding: 20px 0;
-  width: 100%;
+  padding-bottom: 50px;
 }
 .sectionImg {
   width: 25%;
@@ -27,13 +26,56 @@
 }
 
 .sectionInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 60%;
-  padding: 10px;
-  margin: 0 50px 0 10px;
+  padding: 50px 10px;
   border-top: 0.5px solid rgba(1, 1, 1, 0.2);
   border-bottom: 0.5px solid rgba(1, 1, 1, 0.2);
 }
 
+.txt {
+  justify-content: space-between;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.txt > li {
+  padding-bottom: 10px;
+}
+
+.txt > li > span:first-child,
+.summaryDiv span {
+  color: rgba(1, 1, 1, 0.5);
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.genresLi {
+  display: flex;
+}
+
 .genres {
   display: flex;
+}
+.genres > li {
+  padding: 0 10px;
+  border-right: 1px solid rgba(1, 1, 1, 0.2);
+}
+.genres > li:first-child {
+  padding-left: 0px;
+}
+
+.genres > li:last-child {
+  border: none;
+}
+.summaryDiv {
+  width: 80%;
+}
+.summaryDiv > p {
+  margin-top: 5px;
 }

@@ -13,7 +13,6 @@ function Home() {
     ).json();
     setMovies(json.data.movies);
     setLoading(false);
-    console.log(json.data.movies[0]);
   };
   useEffect(() => {
     getMovies();
