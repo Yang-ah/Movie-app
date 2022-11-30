@@ -6,8 +6,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<Details />} path="/movie/:id" />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/id"} element={<Details />} />
       </Routes>
     </Router>
   );

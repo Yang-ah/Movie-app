@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import styles from "../css/Details.module.css";
 
@@ -25,7 +25,7 @@ function Details() {
       ) : (
         <section className={styles.section}>
           <article className={styles.sec_txtcon}>
-            <Link to={`/`} className={styles.homeBtn}>
+            <Link to={process.env.PUBLIC_URL + "/"} className={styles.homeBtn}>
               <div>🏠Home</div>
             </Link>
             <h1 className={styles.title}>{movie.title}</h1>
