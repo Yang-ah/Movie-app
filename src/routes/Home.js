@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styles from "../css/Home.module.css";
 
+export const goTop = () => (document.documentElement.scrollTop = 0);
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
@@ -17,6 +19,7 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
+
   return (
     <div className={styles.nextRoot}>
       {loading ? (
@@ -39,6 +42,9 @@ function Home() {
               />
             ))}
           </section>
+          <div onClick={goTop} className={styles.topBtn}>
+            Top
+          </div>
         </div>
       )}
     </div>

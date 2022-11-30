@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import styles from "../css/Details.module.css";
+import { goTop } from "../routes/Home";
 
 function Details() {
   const [movie, setMoive] = useState("");
@@ -17,7 +18,7 @@ function Details() {
   useEffect(() => {
     getMovie();
   }, [getMovie]);
-
+  goTop();
   return (
     <div className={styles.wrap}>
       {loading ? (
