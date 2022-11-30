@@ -12,7 +12,7 @@ function Movie({
   rating,
 }) {
   return (
-    <Link to={`/movie/${id}`}>
+    <Link to={process.env.PUBLIC_URL + `/movie/${id}`}>
       <div className={styles.wrap}>
         <div className={styles.wrap_hover}></div>
         <span className={styles.hover_txt}>Go Detail👉🏻</span>

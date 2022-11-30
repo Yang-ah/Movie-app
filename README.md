@@ -1,5 +1,7 @@
 # Movie-app
 
+## Result Link : "https://yang-ah.github.io/Movie-app/"
+
 ## 1. Movie Home path = "/"
 
 ![react](https://user-images.githubusercontent.com/97151214/204224496-403cac0f-31d9-46ed-a1d1-e1db91637501.png)
